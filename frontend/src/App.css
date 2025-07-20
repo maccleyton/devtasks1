@@ -1,0 +1,207 @@
+/* Reset geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #9c9c9c; /* cinza claro */
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  color: #2d3748; /* cor escura para light mode */
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto; /* isso já centraliza horizontalmente */
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra o conteúdo dentro do container */
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .container {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #eee;
+}
+
+body.dark-mode button {
+  background-color: #005fa3;
+  color: #eee;
+}
+
+body.dark-mode button:hover {
+  background-color: #004080;
+  opacity: 1;
+}
+
+body.dark-mode .task-item {
+  background-color: #222;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .task-item:hover {
+  background: #004080;
+  color: #fff;
+}
+
+body.dark-mode .message.success {
+  color: #90ee90;
+}
+
+body.dark-mode .message.error {
+  color: #f08080;
+}
+
+/* Botão dark mode */
+
+body.dark-mode h1 {
+  color: #e2e8f0; /* cor clara para dark mode */
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: #0077cc;
+  color: white;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #005fa3;
+  opacity: 0.8;
+}
+
+/* Lista de tarefas */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 100px;
+}
+
+/* task-item */
+.task-item {
+  background-color: white;
+  color: #2d3748; /* texto escuro pro light mode */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.task-item:hover {
+  background: #e6fffa;
+}
+
+.task-item h3 {
+  margin: 0;
+}
+
+.task-item .buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.task-item button {
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.task-item button:hover {
+  opacity: 0.8;
+}
+
+/* Form */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input,
+.task-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.task-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.task-form button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.task-form button:hover:enabled {
+  background-color: #005fa3;
+  opacity: 0.8;
+}
+
+/* Messages */
+.message {
+  margin-top: 10px;
+  font-weight: bold;
+  color: green;
+  transition: color 0.3s ease;
+}
+
+.message.error {
+  color: red;
+}
+
+/* Loading */
+.loading {
+  color: #555;
+  font-style: italic;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.empty-message {
+  text-align: center;
+  color: #999;
+  margin-top: 2rem;
+}
