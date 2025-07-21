@@ -1,0 +1,4 @@
+JWT_SECRET=maccleyton@765
+PORT=3333
+DB_CLIENT=sqlite3
+DB_FILENAME=./dev.sqlite3
