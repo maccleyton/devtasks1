@@ -1,0 +1,24 @@
+# Exported from Render on 2025-07-22T16:38:11Z
+services:
+- type: web
+  name: DevTask
+  runtime: node
+  repo: https://github.com/maccleyton/devtasks1
+  plan: free
+  envVars:
+  - key: NODE_ENV
+    sync: false
+  - key: DB_FILENAME
+    sync: false
+  - key: DB_CLIENT
+    sync: false
+  - key: PORT
+    sync: false
+  - key: JWT_SECRET
+    sync: false
+  region: oregon
+  buildCommand: npm install
+  startCommand: npm start
+  autoDeployTrigger: commit
+  rootDir: backend
+version: "1"
